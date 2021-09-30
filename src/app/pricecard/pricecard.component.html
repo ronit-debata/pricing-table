@@ -1,0 +1,24 @@
+<div class="card mb-5 mb-lg-0">
+    <div class="card-body">
+      <h5 class="card-title text-muted text-uppercase text-center">{{myData.title}}</h5>
+      <h6 class="card-price text-center">{{myData.price}}<span class="period">/month</span></h6>
+      <hr>
+      <ul class="fa-ul">
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>{{myData.user}}</li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>{{myData.storage}}</li>
+        <li [ngClass]="{'text-muted': !myData.unlimited_public_projects}"><span class="fa-li"><i *ngIf="!myData.unlimited_public_projects" class="fas fa-times"></i><i *ngIf="myData.unlimited_public_projects" class="fas fa-check"></i></span>Unlimited Public Projects</li>
+        <li [ngClass]="{'text-muted': !myData.community_access}"><span class="fa-li"><i *ngIf="!myData.community_access" class="fas fa-times"></i><i *ngIf="myData.community_access" class="fas fa-check"></i></span>Community Access</li>
+        <li [ngClass]="{'text-muted': !myData.unlimited_private_projects}"><span class="fa-li"><i *ngIf="!myData.unlimited_private_projects" class="fas fa-times"></i><i *ngIf="myData.unlimited_private_projects" class="fas fa-check"></i></span>Unlimited
+          Private Projects</li>
+        <li [ngClass]="{'text-muted': !myData.dedicated_phone_support}"><span class="fa-li"><i *ngIf="!myData.dedicated_phone_support" class="fas fa-times"></i><i *ngIf="myData.dedicated_phone_support" class="fas fa-check"></i></span>Dedicated
+          Phone Support</li>
+        <li [ngClass]="{'text-muted': !myData.free_subdomain}"><span class="fa-li"><i *ngIf="!myData.free_subdomain" class="fas fa-times"></i><i *ngIf="myData.free_subdomain" class="fas fa-check"></i></span>Free Subdomain
+        </li>
+        <li [ngClass]="{'text-muted': !myData.monthly_reports}"><span class="fa-li"><i *ngIf="!myData.monthly_reports" class="fas fa-times"></i><i *ngIf="myData.monthly_reports" class="fas fa-check"></i></span>Monthly Status
+          Reports</li>
+      </ul>
+      <div class="d-grid">
+        <a href="#" class="btn btn-primary text-uppercase">Button</a>
+      </div>
+    </div>
+  </div>
